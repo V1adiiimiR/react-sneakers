@@ -1,6 +1,70 @@
 import Card from './components/Card'
 import Drawer from './components/Drawer'
 import Header from './components/Header'
+
+const arr = [
+	{
+		title: 'Мужжсские Кроссовки Nike Blazer Mid Suede',
+		price: 12990,
+		imageUrl: 'img/sneakers/1.jpg',
+	},
+	{
+		title: 'Мужские Кроссовки Nike Air Max 270',
+		price: 15600,
+		imageUrl: 'img/sneakers/2.jpg',
+	},
+	{
+		title: 'Мужские Кроссовки Nike Blazer Mid Suede',
+		price: 10600,
+		imageUrl: 'img/sneakers/3.jpg',
+	},
+	{
+		title: 'Кроссовки Puma X Aka Boku Future Rider',
+		price: 8990,
+		imageUrl: 'img/sneakers/4.jpg',
+	},
+	{
+		title: 'Мужские Кроссовки Under Armour Curry 8',
+		price: 15199,
+		imageUrl: 'img/sneakers/5.jpeg',
+	},
+	{
+		title: 'Мужские Кроссовки Nike Kyrie 7',
+		price: 11299,
+		imageUrl: 'img/sneakers/6.jpeg',
+	},
+	{
+		title: 'Мужские Кроссовки Jordan Air Jordan 11',
+		price: 10790,
+		imageUrl: 'img/sneakers/7.jpeg',
+	},
+	{
+		title: 'Мужские Кроссовки Nike LeBron XVIII',
+		price: 16490,
+		imageUrl: 'img/sneakers/8.jpeg',
+	},
+	{
+		title: 'Мужские Кроссовки Nike Lebron XVIII Low',
+		price: 13199,
+		imageUrl: 'img/sneakers/9.jpeg',
+	},
+	{
+		title: 'Мужские Кроссовки Nike Blazer Mid Suede',
+		price: 8490,
+		imageUrl: 'img/sneakers/1.jpg',
+	},
+	{
+		title: 'Кроссовки Puma X Aka Boku Future Rider',
+		price: 8990,
+		imageUrl: 'img/sneakers/4.jpg',
+	},
+	{
+		title: 'Мужские Кроссовки Nike Kyrie Flytrap IV',
+		price: 12490,
+		imageUrl: 'img/sneakers/10.jpeg',
+	},
+]
+
 function App() {
 	return (
 		<div className='wrapper clear '>
@@ -15,78 +79,10 @@ function App() {
 						<input type='text' placeholder='Поиск...' />
 					</div>
 				</div>
-				<div className='d-flex justify-between'>
-					<Card />
-
-					<div className='card pos-r'>
-						<button className='pos-a'>
-							<img src='/img/heart.svg' alt='save' />
-						</button>
-						<img
-							width={133}
-							height={112}
-							src='/img/sneakers/2.jpg'
-							alt='sneakers'
-						/>
-						<h5 className='text-left'>Мужские Кроссовки Nike Air Max 270</h5>
-						<div className='d-flex justify-between align-center'>
-							<div className='d-flex flex-column'>
-								<span className='mb-5'>Цена:</span>
-								<b>12990 руб.</b>
-							</div>
-							<button>
-								<img src='/img/plus.svg' alt='' />
-							</button>
-						</div>
-					</div>
-
-					<div className='card pos-r'>
-						<button className='pos-a'>
-							<img src='/img/heart.svg' alt='' />
-						</button>
-						<img
-							width={133}
-							height={112}
-							src='/img/sneakers/3.jpg'
-							alt='sneakers'
-						/>
-						<h5 className='text-left'>
-							Мужские Кроссовки Nike Blazer Mid Suede
-						</h5>
-						<div className='d-flex justify-between align-center'>
-							<div className='d-flex flex-column'>
-								<span className='mb-5'>Цена:</span>
-								<b>8 499 руб. руб.</b>
-							</div>
-							<button>
-								<img src='/img/plus.svg' alt='plus' />
-							</button>
-						</div>
-					</div>
-
-					<div className='card pos-r'>
-						<button className='pos-a'>
-							<img src='/img/heart.svg' alt='' />
-						</button>
-						<img
-							width={133}
-							height={112}
-							src='/img/sneakers/4.jpg'
-							alt='sneakers'
-						/>
-						<h5 className='text-left'>
-							Кроссовки Puma X Aka Boku Future Rider
-						</h5>
-						<div className='d-flex justify-between align-center'>
-							<div className='d-flex flex-column'>
-								<span className='mb-5'>Цена:</span>
-								<b>8 999 руб. руб.</b>
-							</div>
-							<button>
-								<img src='/img/plus.svg' alt='' />
-							</button>
-						</div>
-					</div>
+				<div className='d-grid justify-between'>
+					{arr.map(obj => (
+						<Card title={obj.title} price={obj.price} imageUrl={obj.imageUrl} />
+					))}
 				</div>
 			</div>
 		</div>
